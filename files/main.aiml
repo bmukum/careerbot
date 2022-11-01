@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    <category>
+        <pattern>Hi</pattern>
+        <template>Hi there, welcome!. I'll ask you just a few questions to recommend 1 out of the following 5 career paths for you.
+        <br/> 1.Software engineer:
+        <br/>2.system administration.
+        <br/>3.web development
+        <br/>4.database engineering
+        <br/>5.IT Project management
+        <br/>
+        <br/>Click the button that appear with you preferences.
+        <br/>
+            <button>
+                <text>ok</text>
+                <postback>commence</postback>
+            </button>
+        </template>
+    </category>
+
+    
+     <category>
+        <pattern>commence</pattern>
+        <template>Do you like to code?
+            <button>
+                <text>yes</text>
+                <postback>math</postback>
+            </button>
+            <button>
+                <text>No</text>
+                <postback>data</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>math</pattern>
+        <template> Do you like solving mathematical problems?  
+            <button>
+                <text>yes</text>
+                <postback>software</postback>
+            </button>
+            <button>
+                <text>No</text>
+                <postback>system administration</postback>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>data</pattern>
+        <template> Do you like working with and manipulating data?
+            <button>
+                <text>yes</text>
+                <postback>database administration</postback>
+            </button>
+            <button>
+                <text>No</text>
+                <postback>pm</postback>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>software</pattern>
+        <template> Do you prefer websites or mobile applications?
+        <button>
+                <text>websites</text>
+                <postback>websites</postback>
+            </button>
+            <button>
+                <text>mobile apps</text>
+                <postback>mobile apps</postback>
+            </button>
+        </template>
+    </category>
+        <category>
+        <pattern>websites</pattern>
+        <template> We think you'd make a good web developer.</template>
+    </category>
+    <category>
+        <pattern>mobile apps</pattern>
+        <template>We think you'd be a good mobile application developer.</template>
+    </category>
+    <category>
+        <pattern>database administration</pattern>
+        <template>We think you're a good fit for a database administrator.</template>
+    </category>
+    <category>
+        <pattern>pm</pattern>
+        <template>IT Project Management would be the best fit according to your choices.</template>
+    </category>
+
+</aiml>
